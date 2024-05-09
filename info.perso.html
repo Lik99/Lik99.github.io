@@ -1,0 +1,19 @@
+<aside>
+    <p class="dateinfo"><?php echo date('M')?><span><?php echo date('d')?></span></p>
+
+       <div class="post-meta">
+          <h4>Info Personnelles</h4>
+         <ul>
+         <?php
+            if (isset($_SESSION['IdUser']) && isset($_SESSION['nomUser'])) {
+                echo '<li class="user"><a href="#">'.$_SESSION['nomUser'].'</a></li>';
+                echo'<li class="permalink"><a href="#">'.$_SESSION['IdUser'].'</a></li>';
+            } else{
+                echo" Vous n'êtes pas connecté";
+            }
+            ?>
+           <!-- <li class="user"><a href="#">Inkown</a></li>
+           <li class="permalink"><a href="#">Inkown</a></li> -->
+        </ul>
+    </div>
+</aside>
